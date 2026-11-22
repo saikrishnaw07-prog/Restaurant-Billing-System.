@@ -1,0 +1,11 @@
+def calculate_tax_discount(subtotal):
+    gst = subtotal * 0.05
+
+    if subtotal >= 500:
+        discount = subtotal * 0.10
+    else:
+        discount = 0
+
+    final_amount = subtotal + gst - discount
+
+    return gst, discount, final_amount

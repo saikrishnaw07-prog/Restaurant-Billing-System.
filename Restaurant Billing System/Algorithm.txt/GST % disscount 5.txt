@@ -1,0 +1,41 @@
+1 Start.
+
+
+
+2 Read the subtotal amount.
+
+
+
+3 Initialize discount to zero.
+
+
+
+4 Check whether the subtotal is greater than or equal to Rs. 1000.
+
+
+
+5 If yes, calculate a 10% discount.
+
+
+
+6 Otherwise, keep the discount as zero.
+
+
+
+7 Subtract the discount from the subtotal.
+
+
+
+8 Calculate 5% GST on the discounted amount.
+
+
+
+9 Add GST to the discounted amount.
+
+
+
+10 Display discount, GST and final amount.
+
+
+
+11 Stop.

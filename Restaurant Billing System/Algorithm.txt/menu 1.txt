@@ -1,0 +1,29 @@
+1.Start.
+
+
+
+2.Create a restaurant menu with food items and prices.
+
+
+
+3.Display the menu to the customer.
+
+
+
+4.Accept the food item number from the customer.
+
+
+
+5.Check whether the entered choice is valid.
+
+
+
+6.If valid, display the selected food item and its price.
+
+
+
+7.Otherwise, display an invalid choice message.
+
+
+
+8.Stop

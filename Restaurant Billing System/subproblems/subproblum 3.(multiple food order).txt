@@ -1,0 +1,20 @@
+def take_orders(menu):
+    orders = []
+
+    while True:
+        choice = int(input("\nEnter food item number (0 to finish): "))
+
+        if choice == 0:
+            break
+
+        if choice not in menu:
+            print("Invalid food selection!")
+            continue
+
+        quantity = select_quantity()
+
+        if quantity > 0:
+            name, price = menu[choice]
+            orders.append((name, price, quantity))
+
+    return orders

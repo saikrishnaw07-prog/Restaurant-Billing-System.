@@ -1,0 +1,7 @@
+def calculate_bill(orders):
+    subtotal = 0
+
+    for name, price, quantity in orders:
+        subtotal += price * quantity
+
+    return subtotal

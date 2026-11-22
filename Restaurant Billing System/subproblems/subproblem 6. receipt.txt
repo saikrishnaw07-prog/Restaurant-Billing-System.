@@ -1,0 +1,24 @@
+def print_receipt(orders, subtotal, gst, discount, final_amount):
+
+    print("\n========================================")
+    print("          RESTAURANT RECEIPT")
+    print("========================================")
+
+    print(f"{'Food':<15}{'Qty':<5}{'Price':<8}{'Total'}")
+    print("----------------------------------------")
+
+    for name, price, quantity in orders:
+        total = price * quantity
+
+        print(f"{name:<15}{quantity:<5}{price:<8}{total}")
+
+    print("----------------------------------------")
+    print(f"Subtotal:          Rs.{subtotal:.2f}")
+    print(f"GST (5%):          Rs.{gst:.2f}")
+    print(f"Discount:          Rs.{discount:.2f}")
+
+    print("----------------------------------------")
+    print(f"FINAL AMOUNT:      Rs.{final_amount:.2f}")
+    print("========================================")
+    print("       THANK YOU! VISIT AGAIN!")
+    print("========================================")

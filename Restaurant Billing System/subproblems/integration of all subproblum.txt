@@ -1,0 +1,110 @@
+# 1. Restaurant Menu
+menu = {
+    1: ("Pizza", 250),
+    2: ("Burger", 120),
+    3: ("Sandwich", 100),
+    4: ("Pasta", 180),
+    5: ("Cold Drink", 50),
+    6: ("French Fries", 90)
+}
+
+orders = []
+
+print("=" * 45)
+print("       WELCOME TO FOOD COURT")
+print("=" * 45)
+
+# 2. Display Menu
+print("\n              MENU CARD")
+print("-" * 45)
+print("Item No.     Food Item          Price")
+print("-" * 45)
+
+for number, item in menu.items():
+    print(f"{number:<13}{item[0]:<19} Rs.{item[1]}")
+
+print("-" * 45)
+
+# 3. Food Selection and Quantity
+while True:
+    try:
+        choice = int(input("\nEnter food item number (0 to finish): "))
+
+        if choice == 0:
+            break
+
+        if choice not in menu:
+            print("Invalid item number! Please try again.")
+            continue
+
+        quantity = int(input("Enter quantity: "))
+
+        if quantity <= 0:
+            print("Quantity must be greater than zero.")
+            continue
+
+        food_name, price = menu[choice]
+        amount = price * quantity
+
+        # 4. Store Multiple Orders
+        orders.append({
+            "name": food_name,
+            "price": price,
+            "quantity": quantity,
+            "amount": amount
+        })
+
+        print(f"{food_name} added successfully!")
+
+    except ValueError:
+        print("Please enter a valid number.")
+
+# 5. Automatic Bill Calculation
+if len(orders) == 0:
+    print("\nNo items ordered. Thank you!")
+else:
+    subtotal = sum(item["amount"] for item in orders)
+
+    # 6. Discount Calculation
+    discount = 0
+
+    if subtotal >= 1000:
+        discount = subtotal * 0.10
+
+    discounted_amount = subtotal - discount
+
+    # GST Calculation (5%)
+    gst = discounted_amount * 0.05
+
+    # Final Amount
+    total = discounted_amount + gst
+
+    # 7. Final Customer Receipt
+    print("\n\n")
+    print("=" * 50)
+    print("             CUSTOMER RECEIPT")
+    print("             RESTAURANT BILL")
+    print("=" * 50)
+
+    print(f"{'Food Item':<15}{'Price':<10}{'Qty':<6}{'Amount'}")
+    print("-" * 50)
+
+    for item in orders:
+        print(
+            f"{item['name']:<15}"
+            f"{item['price']:<10}"
+            f"{item['quantity']:<6}"
+            f"Rs.{item['amount']}"
+        )
+
+    print("-" * 50)
+    print(f"{'Subtotal:':<30} Rs.{subtotal:.2f}")
+    print(f"{'Discount (10%):':<30} Rs.{discount:.2f}")
+    print(f"{'GST (5%):':<30} Rs.{gst:.2f}")
+    print("-" * 50)
+    print(f"{'FINAL AMOUNT:':<30} Rs.{total:.2f}")
+    print("=" * 50)
+
+    print("\n       THANK YOU! VISIT AGAIN!")
+    print("=" * 50)
+

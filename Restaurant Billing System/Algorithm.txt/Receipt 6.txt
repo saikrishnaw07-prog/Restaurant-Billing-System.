@@ -1,0 +1,41 @@
+1.Start.
+
+
+
+2 Read customer order details.
+
+
+
+3 Read subtotal, discount, GST and final amount.
+
+
+
+4 Display restaurant name and receipt heading.
+
+
+
+5 Display all ordered food items with their prices and quantities.
+
+
+
+6 Display subtotal.
+
+
+
+7 Display discount amount.
+
+
+
+8 Display GST amount.
+
+
+
+9 Display the final payable amount.
+
+
+
+10 Display a thank-you message.
+
+
+
+11 Stop.

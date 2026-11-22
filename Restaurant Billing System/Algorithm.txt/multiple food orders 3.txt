@@ -1,0 +1,41 @@
+1 Start.
+
+
+
+2 Initialize an empty order list.
+
+
+
+3 Display the restaurant menu.
+
+
+
+4 Ask the customer to select a food item.
+
+
+
+5 Check whether the selection is valid.
+
+
+
+6 If valid, accept the quantity.
+
+
+
+7 Add the selected food item, price and quantity to the order list.
+
+
+
+8 Ask whether the customer wants to order another item.
+
+
+
+9 If yes, repeat the selection process.
+
+
+
+10 Otherwise, display all selected orders.
+
+
+
+11 Stop.

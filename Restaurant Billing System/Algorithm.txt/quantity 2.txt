@@ -1,0 +1,33 @@
+1 Start.
+
+
+
+2 Display the selected food item and its price.
+
+
+
+3 Ask the customer to enter the quantity.
+
+
+
+4 Read the quantity.
+
+
+
+5 Check whether the quantity is greater than zero.
+
+
+
+6 If valid, calculate the item amount using price × quantity.
+
+
+
+7 Display the quantity and total amount.
+
+
+
+8 Otherwise, display an invalid quantity message.
+
+
+
+9 Stop.

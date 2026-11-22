@@ -1,0 +1,16 @@
+def display_menu():
+    menu = {
+        1: ("Pizza", 150),
+        2: ("Burger", 100),
+        3: ("Sandwich", 80),
+        4: ("Pasta", 120),
+        5: ("Cold Drink", 40)
+    }
+
+    print("\n========== RESTAURANT MENU ==========")
+    print("Item No.   Food Item       Price")
+
+    for item, details in menu.items():
+        print(f"{item:<10} {details[0]:<15} Rs.{details[1]}")
+
+    return menu
